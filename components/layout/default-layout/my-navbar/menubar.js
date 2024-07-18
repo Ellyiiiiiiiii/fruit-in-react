@@ -9,17 +9,17 @@ import styles from './menubar.module.scss'
 const menuItems = [
   {
     id: 1,
-    label: '商品分類1',
-    href: '/news',
+    label: '首頁',
+    href: '/',
   },
   {
     id: 2,
-    label: '商品分類2',
-    href: '/news',
+    label: '商品Detail',
+    href: '/detail',
   },
   {
     id: 3,
-    label: '商品分類3',
+    label: '會員',
     href: '/member',
     children: [
       { id: 32, label: '登入', href: '/member/login' },
@@ -39,8 +39,13 @@ const menuItems = [
   },
   {
     id: 5,
-    label: '關於我們',
-    href: '/about',
+    label: '購物車',
+    href: '/cart',
+  },
+  {
+    id: 6,
+    label: '會員',
+    href: '/member',
   },
 ]
 
