@@ -23,10 +23,10 @@ export default function MyNavbar() {
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light bgclor">
           <div className="container-fluid">
             <Link className="navbar-brand" href="/">
-              <Image src="/next.svg" alt="" width={100} height={24} priority />
+              Fruitables
             </Link>
             <button
               className="navbar-toggler"

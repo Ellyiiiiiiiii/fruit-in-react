@@ -1,6 +1,7 @@
 import React from 'react'
-import { FaUser, FaDollarSign } from "react-icons/fa6"
+import { FaUser, FaDollarSign } from 'react-icons/fa6'
 import { FaShoppingBag } from 'react-icons/fa'
+import { GiShop } from 'react-icons/gi'
 
 export default function Member() {
   return (
@@ -26,6 +27,12 @@ export default function Member() {
                 <a className="nav-link" href="./member-or">
                   <FaShoppingBag />
                   訂單
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="./de-product/add-product">
+                  <GiShop />
+                  上架商品
                 </a>
               </li>
             </ul>

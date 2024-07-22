@@ -9,50 +9,49 @@ import styles from './menubar.module.scss'
 const menuItems = [
   {
     id: 1,
-    label: '首頁',
-    href: '/',
+    label: '商品列表',
+    href: '/member',
+    children: [
+      { id: 32, label: '筆記型電腦', href: '/notebook-shop' },
+      { id: 33, label: '桌上型電腦', href: '/member/register' },
+      { id: 34, label: '耳機', href: '/member/forget-password' },
+      { id: 35, label: '平板', href: '/member/forget-password' },
+      { id: 36, label: '手機', href: '/member/forget-password' },
+      { id: 37, label: '遊戲機', href: '/member/forget-password' },
+      { id: 38, label: '顯示器', href: '/member/forget-password' },
+    ],
   },
   {
     id: 2,
-    label: '商品Detail',
+    label: 'Shop Detail',
     href: '/detail',
   },
-  {
-    id: 3,
-    label: '會員',
-    href: '/member',
-    children: [
-      { id: 32, label: '登入', href: '/member/login' },
-      { id: 33, label: '註冊', href: '/member/register' },
-      { id: 34, label: '忘記密碼', href: '/member/forget-password' },
-    ],
-  },
-  {
-    id: 4,
-    label: '商品',
-    href: '/product',
-    children: [
-      { id: 41, label: '列表', href: '/product/list' },
-      { id: 42, label: '詳細', href: '/product/01' },
-      { id: 43, label: '購物車', href: '/cart' },
-    ],
-  },
-  {
-    id: 5,
-    label: '購物車',
-    href: '/cart',
-  },
-  {
-    id: 6,
-    label: '會員',
-    href: '/member',
-  },
+  // {
+  //   id: 3,
+  //   label: '老師版會員',
+  //   href: '/member',
+  //   children: [
+  //     { id: 32, label: '登入', href: '/member/login' },
+  //     { id: 33, label: '註冊', href: '/member/register' },
+  //     { id: 34, label: '忘記密碼', href: '/member/forget-password' },
+  //   ],
+  // },
+  // {
+  //   id: 4,
+  //   label: '老師版商品',
+  //   href: '/product',
+  //   children: [
+  //     { id: 41, label: '列表', href: '/product/list' },
+  //     { id: 42, label: '詳細', href: '/product/01' },
+  //     { id: 43, label: '購物車', href: '/cart' },
+  //   ],
+  // },
 ]
 
 export default function MainMenu({ currentRoute = '/' }) {
   return (
     <>
-      <ul className="navbar-nav flex-grow-1 ps-lg-5 ps-xs-0 mx-auto">
+      <ul className="navbar-nav flex-grow-1 ps-lg-5 ps-xs-0 mx-auto bgclor">
         {menuItems.map((v) => {
           // 用children判斷是否有下拉選單
           if (!v.children) {
@@ -115,6 +114,25 @@ export default function MainMenu({ currentRoute = '/' }) {
           )
         })}
       </ul>
+      
+      {/* <i
+        className="fa fa-shopping-bag fa-2x ms-2 me-2"
+        style={{ color: 'white' }}
+      />
+      <a href="./member.html">
+        <i className="fa-solid fa-user fa-2x me-2" style={{ color: 'white' }} />
+      </a> */}
+
+      <style global jsx>
+        {`
+          .bgclor {
+            background: linear-gradient(to bottom, #f6402e 10%, #ff6433 100%);
+          }
+          body {
+            background: #f5f5f5;
+          }
+        `}
+      </style>
     </>
   )
 }
